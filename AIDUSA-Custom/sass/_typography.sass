@@ -1,0 +1,44 @@
+em
+  font-style: italic
+
+h1
+  font-size: 1.8rem
+  line-height: 1.2
+
+h2
+  font-size: 1.6rem
+  line-height: 1.4
+
+h3
+  font-size: 1.3rem
+  line-height: 1.5
+
+h4
+  font-size: 1.2rem
+  line-height: 1.5
+
+p
+  line-height: 1.4
+
+strong
+  font-weight: bold
+
+h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p, p + p
+  margin-top: .5rem
+
+p + h1, p + h2, p + h3, p + h4, p + h5, p + h6
+  margin-top: .5em
+
+@media only screen and (max-width: $break-tablet)
+  body
+    font-size: 14px
+    h1
+      font-size: 1.3rem
+      line-height: 1.5
+      font-weight: 700
+    h2
+      font-size: 1.2rem
+      font-weight: 500
+    h3
+      font-size: 1.1rem
+      font-weight: 600

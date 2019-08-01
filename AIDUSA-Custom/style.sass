@@ -1,0 +1,187 @@
+/*
+  Theme Name: AIDUSA Custom
+  Theme URI: https://mcwilliamsmedia.com
+  Author: JRo
+  Author URI: https://robros.design
+  Description: Custom Theme for AIDUSA
+  Version: 1
+
+@import 'sass/reset'
+@import 'sass/vars'
+@import 'sass/header'
+@import 'sass/menu'
+@import 'sass/typography'
+@import 'sass/elements'
+
+html
+  max-width: 100vw
+body
+  font-family: 'Open Sans', sans-serif
+  box-sizing: border-box
+  max-width: 100vw
+  *
+    font-family: inherit
+    box-sizing: inherit
+  main
+    >*
+      max-width: $grid-size
+      margin: auto
+  a
+    color: var(--col-main)
+    &:hover
+      text-decoration: none
+      color: var(--col-second)
+
+.wp-block-button.theme-color-bg
+  .wp-block-button__link
+    display: inline-flex
+    padding: .5em
+    background-color: var(--col-second)
+    color: var(--col-main)
+    &:after
+      content: ''
+      font-family: 'FontAwesome'
+    &:hover
+      background-color: var(--col-main)
+      color: var(--col-second)
+
+.wp-block-columns
+  display: grid
+  justify-items: center
+  grid-gap: 1em
+  width: 100%
+  // max-width: 100%
+  @media only screen and (min-width: $grid-size)
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+  .wp-block-column
+    display: flex
+    flex-flow: column
+    align-items: flex-start
+    figure
+      max-width: 100%
+      img
+        max-width: 100%
+    p
+      max-width: 400px
+    &.bottomfill
+      &>*
+        flex-shrink: 1
+        &:last-child
+          flex-shrink: 0
+          flex-grow: 1
+          display: flex
+          align-items: flex-end
+
+.bg-fill
+  background: white
+
+figure
+
+  figcaption
+    font-style: italic
+    text-align: center
+    font-size: small
+
+p:last-child
+  padding-bottom: 1.5em
+
+p + .wp-block-image
+  padding-top: 1em
+
+// .alignright
+//   float: right
+//   padding: 1em
+//   max-width: 60%
+
+// .alignleft
+//   float: left
+//   padding: 1em
+//   max-width: 60%
+
+// .aligncenter
+//   margin: auto
+//   display: grid
+//   place-items: center
+
+// .alignwide
+//   width: auto
+//   @media only screen and (max-width: $grid-size + 201) and (min-width: $grid-size)
+//     margin: 0 calc(  (99vw - #{$grid-size}) / -2  )
+//   @media only screen and (min-width: $grid-size + 202)
+//     margin: 0 -100px
+//   .alignwide, .alignfull
+//       margin-left: 0!important
+
+// .alignfull
+//   width: 99vw
+//   @media only screen and (min-width: $grid-size)
+//     margin-left: calc( ( 99vw - #{$grid-size} ) / -2 )
+//   .alignfull, .alignwide
+//     margin-left: 0!important
+
+.reverse
+  flex-direction: column-reverse
+
+figure.alignwide, figure.alignfull
+  &>img
+    object-fit: cover
+    width: 100%
+
+.alignwide
+  max-width: 100%
+  width: $grid-size + 200px
+  margin: auto
+
+.alignfull
+  max-width: 100%
+  width: 100%
+  margin: auto
+
+.padded
+  padding-top: 1em
+  padding-bottom: 1em
+.mobile-responsive
+  max-width: 100%
+  height: auto
+.with-sidebar
+  display: flex
+  flex-flow: row wrap
+  aside
+    flex: 300px 1 0
+    padding: 0 1em 50px 30px
+    max-width: 300px
+    ul
+      margin-top: 1rem
+      line-height: 1.3
+  .main-content
+    flex: 800px 0 1
+    max-width: 100%
+    section
+      margin-bottom: 2em
+      position: relative
+      display: block
+      max-width: 100%
+      figure, img
+        max-width: 100%!important
+        height: auto
+
+footer
+  display: grid
+  place-items: center
+  background: #121212
+  color: #555
+
+@media only screen and (min-width: $grid-size + 30px)
+  .in-grid
+    padding-left: calc((100vw - #{$grid-size})/4)
+    padding-right: calc((100vw - #{$grid-size})/4)
+
+@media only screen and (max-width: $grid-size)
+  // .wp-block-columns
+  //   display: grid
+  //   .wp-block-column
+  //     display: grid
+  //     place-items: center
+  .in-grid
+    padding-left: 1em
+    padding-right: 1em

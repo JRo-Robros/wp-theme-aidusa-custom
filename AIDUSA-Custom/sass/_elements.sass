@@ -1,0 +1,48 @@
+a.btn, .btn a
+  background: transparent
+
+  &:hover
+    background: #f6f6f6
+
+  &.round
+    display: grid
+    place-items: center
+    width: 32px
+    height: 32px
+    border: solid 1px
+    border-radius: 50%
+    font-size: 14px
+
+  &.white
+    color: #f6f6f6
+    &:hover
+      color: var(--col-main)
+      background: #f6f6f6
+
+#social
+  display: flex
+  flex-flow: row wrap
+
+  &>*
+    margin: 5px
+
+.wp-block-cover
+  height: 700px
+  max-height: calc(100vh - 300px)
+
+
+//breadcrumbs
+#breadcrumbs
+  list-style: none
+  margin: 10px 0
+  overflow: hidden
+  li
+    display: inline-block
+    vertical-align: middle
+    margin-right: 15px
+  .separator
+    font-size: 18px
+    font-weight: 100
+    color: #ccc
+  .bread-current
+    color: #f0f0f0

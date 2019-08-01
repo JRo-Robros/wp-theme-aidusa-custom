@@ -1,0 +1,59 @@
+@import 'vars'
+
+#header-top
+    background: var(--col-main)
+    color: #f0f0f0
+    padding: 10px 0
+    text-align: center
+    .holder
+      margin: auto
+      display: grid
+      place-items: center
+      grid-gap: .5em
+      p
+        padding: 0
+        margin: 0
+        line-height: 2.5
+
+#header-main
+  display: grid
+  place-items: center
+  grid-template-columns: 2fr 1fr
+  grid-template-rows: auto auto
+  grid-auto-flow: column
+
+#title-section
+  background: linear-gradient(to bottom left, #444450, #121220)
+  padding: .25rem
+  margin-bottom: 1rem
+  a
+    color: var(--col-second)
+    opacity: .8
+    &:hover
+      opacity: 1
+  .holder
+    max-width: $grid-size
+    margin: auto
+
+@media only screen and (min-width: $grid-size)
+  #header-top
+    .holder
+      max-width: $grid-size
+      grid-auto-flow: column
+      grid-template-columns: 1fr auto 1fr
+      &>div:last-of-type
+        justify-self: end
+
+
+  #header-main
+    grid-auto-flow: row
+    grid-template-rows: auto
+    grid-template-columns: 300px 1fr auto
+    max-width: $grid-size
+    margin: auto
+
+@media only screen and (max-width: $break-mobile)
+  #header-main
+    grid-template-columns: 100%
+    grid-template-rows: repeat( auto-fill, auto )
+    grid-auto-flow: row
